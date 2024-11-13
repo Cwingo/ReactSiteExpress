@@ -1,16 +1,21 @@
 {
   "name": "reactsiteexpress",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "build": "cd client && npm install && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node src/server.js",
+    "client": "cd client && npm start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "concurrently": "^7.0.0"
   },
   "devDependencies": {},
-  "description": ""
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
